@@ -1,40 +1,59 @@
 export const projectsData = [
     {
         id: 1,
-        name: 'AI Powered Financial App',
-        description: "Me and my team built an AI-powered financial mobile application. I have developed API using Express, Typescript, OpenAI, AWS, and MongoDB. Used OTP via AWS SES, Google, and Facebook for the authentication system. Built AI assistants using OpenAI's latest model and trained using our dataset. Voice messages are converted to text using AWS Transcribe. The app fetches data from Google Sheets and generates a PDF term sheet, sent via AWS SES.",
-        tools: ['Express', 'MongoDB', 'OpenAI API', 'AWS SES', 'AWS S3', 'Node Mailer', 'Joi', 'Puppeteer', 'EC2', 'PM2', 'Nginx'],
+        name: 'Real-Time Collaborative Sync Engine',
+        description: "Building a Java/Spring Boot backend system designed to support real-time shared-data synchronization across multiple connected clients using WebSocket-based communication. Developing MySQL-backed persistence and version-based update validation to detect concurrent modifications and reduce data inconsistency during simultaneous requests. Planned features include Redis Pub/Sub integration for multi-instance event distribution and advanced conflict-resolution workflows.",
+        tools: ['Java', 'Spring Boot', 'WebSockets', 'MySQL', 'REST APIs', 'Redis (Planned)'],
         role: 'Backend Developer',
         code: '',
         demo: '',
+        status: 'In Progress',
+        period: 'October 2026',
+        highlights: [
+            'WebSocket-based client synchronization (in development)',
+            'MySQL-backed persistence design',
+            'Version-based update validation to reduce data conflicts',
+            'Conflict-resolution workflows (planned)',
+            'Redis Pub/Sub for multi-instance events (planned)',
+        ]
     },
     {
         id: 2,
-        name: 'Travel Agency App',
-        description: 'I have designed and developed a full-stack web app for 2Expedition, a travel agency in Armenia. I created the UI using NextJS, Typescript, MUI, TailwindCSS, Google Maps, Sun-Editor, and React Slick. The app supports multiple languages and currencies. I developed the API using NestJS, Typescript, MySQL, TypeORM, AWS, and Nodemailer. I deployed the front-end app to AWS Amplify and the back-end app to AWS EC2.',
-        tools: ['NextJS', 'Tailwind CSS', "Google Maps", "NestJS", "TypeScript", "MySQL", "AWS S3", "Sun-Editor", "Gmail Passkey"],
-        role: 'Full Stack Developer',
+        name: 'Employee Management System',
+        description: "RESTful Employee Management System built with Spring Boot, featuring complete CRUD operations and a clean layered architecture using Controller, Service, Repository, DTO, and Mapper components. Integrates Spring Data JPA and Hibernate with MySQL for persistent storage. Implements DTO-based data transfer, custom RuntimeException handling for employee-not-found scenarios, and REST API validation with Postman.",
+        tools: ['Java', 'Spring Boot', 'REST API', 'MySQL', 'Spring Data JPA', 'Hibernate', 'Maven', 'Postman'],
+        role: 'Backend Developer',
         code: '',
         demo: '',
+        status: 'Completed',
+        period: 'August 2026',
+        highlights: [
+            'Full CRUD REST API with Spring Boot',
+            'Layered architecture: Controller → Service → Repository → DTO',
+            'Spring Data JPA + Hibernate + MySQL integration',
+            'DTO-based data transfer pattern',
+            'Custom RuntimeException for not-found scenarios',
+            'Tested with Postman',
+        ]
     },
     {
         id: 3,
-        name: 'AI Powered Real Estate',
-        description: 'My team built an AI-based real estate app using Replicate API and OpenAI. We used Express, Typescript, OpenAI, Replicate, Stripe, and Mongoose to develop the API. We utilized NextJS, Formik, TailwindCSS, and other npm libraries for the UI. We have trained multiple AI assistants using the latest GPT model and integrated Replicate API for image processing. We added role-based auth, subscription plans, Cron job scheduling, and payment integration with Stripe.',
-        tools: ['React', 'Bootstrap', 'SCSS', 'Stripe', 'Express', 'TypeScript', 'MongoDB', 'Azure Blob', 'OpenAI API', 'Replicate AI', 'Cronjob', 'JWT'],
+        name: 'Multithreaded File Downloader',
+        description: "Java application that splits file downloads into multiple segments and processes them concurrently using separate threads. Uses Java Thread and Runnable, coordinates threads with join() and synchronization to maintain data integrity during concurrent operations. Implements structured exception handling for download errors and reliable file processing under varying runtime conditions.",
+        tools: ['Java', 'Multithreading', 'Exception Handling', 'File I/O'],
+        role: 'Backend Developer',
         code: '',
-        role: 'Full Stack Developer',
         demo: '',
+        status: 'Completed',
+        period: 'May 2026',
+        highlights: [
+            'Concurrent download segment processing',
+            'Java Thread and Runnable implementation',
+            'Thread coordination via join() and synchronization',
+            'Data integrity during concurrent operations',
+            'Structured exception handling for runtime errors',
+        ]
     },
-    {
-        id: 4,
-        name: 'Newsroom Management',
-        description: "My team and I developed a newspaper management dashboard application called Newsroom Management. As a front-end developer, I worked on creating the dashboard using NextJS, Material UI, Redux, Calendar, and other necessary npm libraries. We used React Redux to manage the application's state and React-hook-form and Sun Editor to handle forms.",
-        tools: ['NextJS', 'Material UI', 'Redux', 'Sun Editor', "Calendar"],
-        code: '',
-        demo: '',
-        role: 'Full Stack Developer',
-    }
 ];
 
 

@@ -82,6 +82,7 @@ import kubernetes from '../app/assets/svg/skills/kubernetes.svg'
 import linux from '../app/assets/svg/skills/linux.svg'
 import sqlalchemy from '../app/assets/svg/skills/sqlalchemy.svg'
 import fastapi from '../app/assets/svg/skills/fastapi.svg'
+import spring from '../app/assets/svg/skills/spring.svg'
 
 
 
@@ -154,6 +155,10 @@ export const skillsImage = (skill) => {
       return go;
     case 'java':
       return java;
+    case 'spring':
+    case 'spring boot':
+    case 'springboot':
+      return spring;
     case 'kotlin':
       return kotlin;
     case 'julia':

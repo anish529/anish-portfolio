@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Portfolio of an aspiring Java backend developer showcasing skills, projects, education, and contact details." />
+<meta name="author" content="Your Name" />
+<meta name="keywords" content="Java backend developer, portfolio, Spring Boot, REST API, SQL, backend engineer" />
+<title>Your Name — Java Backend Developer</title>
+
+<!-- Open Graph -->
+<meta property="og:title" content="Your Name — Java Backend Developer" />
+<meta property="og:description" content="Aspiring Java backend developer. Explore my projects, skills, and education." />
+<meta property="og:type" content="website" />
+
+<!-- Structured data for ATS / SEO -->
+<script type="application/ld+json">
+{
+  "@context": "[schema.org](https://schema.org)",
+  "@type": "Person",
+  "name": "Your Name",
+  "jobTitle": "Java Backend Developer",
+  "url": "[yourdomain.com](https://yourdomain.com)",
+  "email": "you@example.com",
+  "knowsAbout": ["Java", "Spring Boot", "REST APIs", "SQL", "Microservices", "Git"]
+}
+</script>
+
+<style>
+  /* ===== Design tokens ===== */
+  :root {
+    --bg: #0b0f14;
+    --bg-elev: #11161d;
+    --bg-card: #151b24;
+    --border: #1f2730;
+    --text: #e6edf3;
+    --text-dim: #8b96a5;
+    --accent: #4fd1c5;
+    --accent-2: #7c9eff;
+    --accent-grad: linear-gradient(135deg, #4fd1c5 0%, #7c9eff 100%);
+    --radius: 14px;
+    --maxw: 1100px;
+    --shadow: 0 8px 30px rgba(0,0,0,0.35);
+    --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  /* ===== Reset ===== */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  img { max-width: 100%; display: block; }
+  ul { list-style: none; }
+
+  /* ===== Layout ===== */
+  .container {
+    width: 100%;
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  section { padding: 96px 0; position: relative; }
+  section + section { border-top: 1px solid var(--border); }
+
+  /* ===== Typography ===== */
+  h1, h2, h3, h4 { line-height: 1.2; font-weight: 700; letter-spacing: -0.02em; }
+  h2.section-title {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    margin-bottom: 8px;
+  }
+  .section-sub {
+    color: var(--text-dim);
+    font-size: 1rem;
+    margin-bottom: 40px;
+    max-width: 600px;
+  }
+  .section-eyebrow {
+    color: var(--accent);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 10px;
+  }
+
+  /* ===== Nav ===== */
+  header.nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(11,15,20,0.75);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    transition: background 0.3s var(--ease);
+  }
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+  }
+  .logo {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--text);
+  }
+  .logo span { color: var(--accent); }
+  nav ul { display: flex; gap: 28px; }
+  nav a {
+    color: var(--text-dim);
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.2s var(--ease);
+  }
+  nav a:hover { color: var(--text); text-decoration: none; }
+  .nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text);
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  /* ===== Hero ===== */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 120px 0 80px;
+    position: relative;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 20% 30%, rgba(79,209,197,0.12), transparent 40%),
+      radial-gradient(circle at 80% 70%, rgba(124,158,255,0.12), transparent 40%);
+    pointer-events: none;
+  }
+  .hero-content { position: relative; z-index: 1; max-width: 760px; }
+  .hero h1 {
+    font-size: clamp(2.25rem, 6vw, 3.75rem);
+    margin-bottom: 18px;
+  }
+  .hero h1 .grad {
+    background: var(--accent-grad);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .hero p.lead {
+    font-size: clamp(1.05rem, 2.5vw, 1.3rem);
+    color: var(--text-dim);
+    margin-bottom: 32px;
+  }
+  .hero-cta { display: flex; gap: 16px; flex-wrap: wrap; }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: transform 0.2s var(--ease), box-shadow 0.2s var(--ease), background 0.2s var(--ease);
+    cursor: pointer;
+    border: 1px solid transparent;
+  }
+  .btn-primary {
+    background: var(--accent-grad);
+    color: #0b0f14;
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(79,209,197,0.3); text-decoration: none; }
+  .btn-ghost {
+    background: transparent;
+    color: var(--text);
+    border-color: var(--border);
+  }
+  .btn-ghost:hover { border-color: var(--accent); text-decoration: none; }
+
+  /* ===== About ===== */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+  }
+  .about-text p { margin-bottom: 16px; color: var(--text-dim); }
+  .about-text p strong { color: var(--text); }
+  .about-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .stat {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+  }
+  .stat .num {
+    font-size: 1.75rem;
+    font-weight: 700;
+    background: var(--accent-grad);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .stat .label { color: var(--text-dim); font-size: 0.9rem; }
+
+  /* ===== Skills ===== */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+  }
+  .skill-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px;
+    transition: transform 0.25s var(--ease), border-color 0.25s var(--ease);
+  }
+  .skill-card:hover { transform: translateY(-4px); border-color: var(--accent); }
+  .skill-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .skill-card h3::before {
+    content: "";
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--accent-grad);
+  }
+  .skill-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+  .tag {
+    background: var(--bg-elev);
+    border: 1px solid var(--border);
+    color: var(--text-dim);
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    transition: color 0.2s var(--ease), border-color 0.2s var(--ease);
+  }
+  .tag:hover { color: var(--accent); border-color: var(--accent); }
+
+  /* ===== Projects ===== */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 28px;
+  }
+  .project-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px;
+    transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
+    display: flex;
+    flex-direction: column;
+  }
+  .project-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+  .project-card .icon {
+    width: 44px; height: 44px;
+    border-radius: 10px;
+    background: var(--accent-grad);
+    display: grid;
+    place-items: center;
+    font-size: 1.3rem;
+    color: #0b0f14;
+    font-weight: 700;
+    margin-bottom: 18px;
+  }
+  .project-card h3 { font-size: 1.2rem; margin-bottom: 10px; }
+  .project-card p { color: var(--text-dim); font-size: 0.95rem; margin-bottom: 18px; flex-grow: 1; }
+  .project-links { display: flex; gap: 16px; font-size: 0.9rem; }
+
+  /* ===== Education / Timeline ===== */
+  .timeline { position: relative; padding-left: 28px; }
+  .timeline::before {
+    content: "";
+    position: absolute;
+    left: 6px; top: 6px; bottom: 6px;
+    width: 2px;
+    background: var(--border);
+  }
+  .tl-item { position: relative; margin-bottom: 36px; }
+  .tl-item:last-child { margin-bottom: 0; }
+  .tl-item::before {
+    content: "";
+    position: absolute;
+    left: -28px; top: 6px;
+    width: 14px; height: 14px;
+    border-radius: 50%;
+    background: var(--accent-grad);
+    border: 3px solid var(--bg);
+  }
+  .tl-date { color: var(--accent); font-size: 0.85rem; font-weight: 600; margin-bottom: 4px; }
+  .tl-item h3 { font-size: 1.1rem; margin-bottom: 4px; }
+  .tl-item .inst { color: var(--text-dim); font-size: 0.9rem; margin-bottom: 8px; }
+  .tl-item p { color: var(--text-dim); font-size: 0.95rem; }
+
+  /* ===== Contact ===== */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+  }
+  .contact-info p { color: var(--text-dim); margin-bottom: 20px; }
+  .contact-info ul li { margin-bottom: 14px; display: flex; align-items: center; gap: 12px; }
+  .contact-info .ic {
+    width: 36px; height: 36px;
+    border-radius: 8px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    display: grid;
+    place-items: center;
+    color: var(--accent);
+    font-weight: 700;
+  }
+  .contact-form { display: grid; gap: 16px; }
+  .contact-form input,
+  .contact-form textarea {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 16px;
+    color: var(--text);
+    font-family: inherit;
+    font-size: 0.95rem;
+    transition: border-color 0.2s var(--ease);
+  }
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+  }
+  .contact-form textarea { min-height: 130px; resize: vertical; }
+
+  /* ===== Footer ===== */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 32px 0;
+    text-align: center;
+    color: var(--text-dim);
+    font-size: 0.9rem;
+  }
+
+  /* ===== Animations ===== */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+  .reveal.d1 { transition-delay: 0.1s; }
+  .reveal.d2 { transition-delay: 0.2s; }
+  .reveal.d3 { transition-delay: 0.3s; }
+  .reveal.d4 { transition-delay: 0.4s; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+    html { scroll-behavior: auto; }
+  }
+
+  /* ===== Responsive ===== */
+  @media (max-width: 860px) {
+    .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 32px; }
+    .about-stats { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 720px) {
+    .nav-toggle { display: block; }
+    nav ul {
+      position: fixed;
+      top: 64px; right: 0;
+      flex-direction: column;
+      gap: 0;
+      background: var(--bg-elev);
+      border-left: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      width: 220px;
+      padding: 12px 0;
+      transform: translateX(100%);
+      transition: transform 0.3s var(--ease);
+    }
+    nav ul.open { transform: translateX(0); }
+    nav ul li { width: 100%; }
+    nav ul a { display: block; padding: 14px 24px; }
+    section { padding: 72px 0; }
+    .hero { min-height: auto; padding: 110px 0 64px; }
+  }
+  @media (max-width: 480px) {
+    .about-stats { grid-template-columns: 1fr; }
+    .container { padding: 0 18px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== Nav ===== -->
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="#home" class="logo">Your<span>.</span>Name</a>
+    <button class="nav-toggle" aria-label="Toggle menu" onclick="toggleMenu()">☰</button>
+    <nav>
+      <ul id="navMenu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== Hero ===== -->
+<section class="hero" id="home">
+  <div class="container hero-content">
+    <p class="section-eyebrow reveal">Hello, I'm</p>
+    <h1 class="reveal d1">Your Name<br><span class="grad">Java Backend Developer</span></h1>
+    <p class="lead reveal d2">
+      Aspiring backend engineer focused on building scalable, secure, and well-tested
+      Java applications. I work with Spring Boot, REST APIs, and relational databases
+      to turn business problems into reliable systems.
+    </p>
+    <div class="hero-cta reveal d3">
+      <a href="#projects" class="btn btn-primary">View Projects</a>
+      <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== About ===== -->
+<section id="about">
+  <div class="container">
+    <p class="section-eyebrow reveal">About Me</p>
+    <h2 class="section-title reveal">A bit about my background</h2>
+    <p class="section-sub reveal d1">Backend-focused developer with hands-on experience in Java, Spring ecosystem, and database design.</p>
+
+    <div class="about-grid">
+      <div class="about-text reveal d2">
+        <p>
+          I'm an aspiring <strong>Java backend developer</strong> passionate about clean architecture,
+          performance, and writing code that's easy to maintain. My focus is on building
+          RESTful services, integrating databases, and applying best practices like SOLID
+          and test-driven development.
+        </p>
+        <p>
+          I've worked on academic and personal projects involving <strong>Spring Boot</strong>,
+          <strong>JWT authentication</strong>, <strong>MySQL/PostgreSQL</strong>, and containerisation
+          with Docker. I enjoy breaking down complex requirements into simple, testable components.
+        </p>
+        <p>
+          Currently sharpening my skills in microservices, message queues (Kafka/RabbitMQ),
+          and cloud deployment on AWS. Always open to internships and junior backend roles.
+        </p>
+      </div>
+
+      <div class="about-stats reveal d3">
+        <div class="stat">
+          <div class="num">5+</div>
+          <div class="label">Backend Projects</div>
+        </div>
+        <div class="stat">
+          <div class="num">2+</div>
+          <div class="label">Years Learning Java</div>
+        </div>
+        <div class="stat">
+          <div class="num">10+</div>
+          <div class="label">Technologies Used</div>
+        </div>
+        <div class="stat">
+          <div class="num">∞</div>
+          <div class="label">Curiosity</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Skills ===== -->
+<section id="skills">
+  <div class="container">
+    <p class="section-eyebrow reveal">Technical Skills</p>
+    <h2 class="section-title reveal">Tools I work with</h2>
+    <p class="section-sub reveal d1">A snapshot of the technologies, frameworks, and practices I use to build backend systems.</p>
+
+    <div class="skills-grid">
+      <div class="skill-card reveal d1">
+        <h3>Languages</h3>
+        <div class="skill-tags">
+          <span class="tag">Java</span>
+          <span class="tag">SQL</span>
+          <span class="tag">Python</span>
+          <span class="tag">JavaScript</span>
+        </div>
+      </div>
+      <div class="skill-card reveal d2">
+        <h3>Frameworks</h3>
+        <div class="skill-tags">
+          <span class="tag">Spring Boot</span>
+          <span class="tag">Spring Security</span>
+          <span class="tag">Spring Data JPA</span>
+          <span class="tag">Hibernate</span>
+        </div>
+      </div>
+      <div class="skill-card reveal d3">
+        <h3>Databases</h3>
+        <div class="skill-tags">
+          <span class="tag">MySQL</span>
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">MongoDB</span>
+          <span class="tag">Redis</span>
+        </div>
+      </div>
+      <div class="skill-card reveal d4">
+        <h3>Tools & DevOps</h3>
+        <div class="skill-tags">
+          <span class="tag">Git</span>
+          <span class="tag">Docker</span>
+          <span class="tag">Maven</span>
+          <span class="tag">Postman</span>
+          <span class="tag">JUnit</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Projects ===== -->
+<section id="projects">
+  <div class="container">
+    <p class="section-eyebrow reveal">Portfolio</p>
+    <h2 class="section-title reveal">Featured Projects</h2>
+    <p class="section-sub reveal d1">A selection of backend projects demonstrating real-world problem solving and clean code.</p>
+
+    <div class="projects-grid">
+      <article class="project-card reveal d1">
+        <div class="icon">RS</div>
+        <h3>RESTful E-Commerce API</h3>
+        <p>
+          A Spring Boot REST API for an e-commerce platform with product catalog, cart,
+          JWT-based authentication, and order processing. Includes role-based access
+          and Swagger documentation.
+        </p>
+        <div class="project-links">
+          <a href="#" target="_blank" rel="noopener">GitHub →</a>
+          <a href="#" target="_blank" rel="noopener">Live Demo →</a>
+        </div>
+      </article>
+
+      <article class="project-card reveal d2">
+        <div class="icon">BM</div>
+        <h3>Blog Management System</h3>
+        <p>
+          A content management backend with CRUD operations, comment threading,
+          pagination, and search. Built with Spring Boot, PostgreSQL, and Hibernate.
+          Includes unit and integration tests.
+        </p>
+        <div class="project-links">
+          <a href="#" target="_blank" rel="noopener">GitHub →</a>
+          <a href="#" target="_blank" rel="noopener">Live Demo →</a>
+        </div>
+      </article>
+
+      <article class="project-card reveal d3">
+        <div class="icon">EX</div>
+        <h3>Expense Tracker API</h3>
+        <p>
+          A personal finance backend supporting user accounts, category-wise expense
+          logging, monthly summaries, and CSV export. Secured with Spring Security
+          and JWT. Deployed via Docker.
+        </p>
+        <div class="project-links">
+          <a href="#" target="_blank" rel="noopener">GitHub →</a>
+          <a href="#" target="_blank" rel="noopener">Live Demo →</a>
+        </div>
+      </article>
+
+      <article class="project-card reveal d4">
+        <div class="icon">CB</div>
+        <h3>Chat Application Backend</h3>
+        <p>
+          A real-time chat service using Spring WebSocket, user presence, and message
+          persistence. Demonstrates concurrent handling and broadcast patterns in
+          a stateless backend.
+        </p>
+        <div class="project-links">
+          <a href="#" target="_blank" rel="noopener">GitHub →</a>
+          <a href="#" target="_blank" rel="noopener">Live Demo →</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Education ===== -->
+<section id="education">
+  <div class="container">
+    <p class="section-eyebrow reveal">Education</p>
+    <h2 class="section-title reveal">Academic background</h2>
+    <p class="section-sub reveal d1">Formal education and certifications that shaped my foundation.</p>
+
+    <div class="timeline">
+      <div class="tl-item reveal d1">
+        <div class="tl-date">2022 — 2026</div>
+        <h3>B.Tech in Computer Science</h3>
+        <div class="inst">Your University Name, City</div>
+        <p>
+          Coursework in Data Structures, DBMS, Operating Systems, Computer Networks,
+          and Software Engineering. Final-year project on distributed backend systems.
+          CGPA: 8.5/10.
+        </p>
+      </div>
+
+      <div class="tl-item reveal d2">
+        <div class="tl-date">2024</div>
+        <h3>Spring Boot Certification</h3>
+        <div class="inst">Online / Udemy</div>
+        <p>
+          Hands-on training in building production-grade Spring Boot applications,
+          covering REST, JPA, Security, testing, and deployment.
+        </p>
+      </div>
+
+      <div class="tl-item reveal d3">
+        <div class="tl-date">2023</div>
+        <h3>Java Full-Stack Course</h3>
+        <div class="inst">Coursera / NPTEL</div>
+        <p>
+          Covered core Java, JDBC, servlets, and modern backend patterns with
+          practical assignments and a capstone project.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Contact ===== -->
+<section id="contact">
+  <div class="container">
+    <p class="section-eyebrow reveal">Contact</p>
+    <h2 class="section-title reveal">Let's connect</h2>
+    <p class="section-sub reveal d1">Open to internships, junior backend roles, and collaboration on Java projects.</p>
+
+    <div class="contact-grid">
+      <div class="contact-info reveal d2">
+        <p>Feel free to reach out via any of the channels below — I usually respond within a day.</p>
+        <ul>
+          <li><span class="ic">@</span> you@example.com</li>
+          <li><span class="ic">in</span> <a href="[linkedin.com](https://linkedin.com/in/yourprofile)" target="_blank" rel="noopener">linkedin.com/in/yourprofile</a></li>
+          <li><span class="ic">gh</span> <a href="[github.com](https://github.com/yourusername)" target="_blank" rel="noopener">github.com/yourusername</a></li>
+          <li><span class="ic">📞</span> +91-XXXXXXXXXX</li>
+        </ul>
+      </div>
+
+      <form class="contact-form reveal d3" onsubmit="return handleSubmit(event)">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer>
+  <div class="container">
+    © <span id="year"></span> Your Name. Built with HTML, CSS &amp; JavaScript.
+  </div>
+</footer>
+
+<script>
+  // ===== Mobile menu =====
+  function toggleMenu() {
+    document.getElementById('navMenu').classList.toggle('open');
+  }
+  document.querySelectorAll('#navMenu a').forEach(a =>
+    a.addEventListener('click', () => document.getElementById('navMenu').classList.remove('open'))
+  );
+
+  // ===== Year =====
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // ===== Scroll reveal =====
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // ===== Nav background on scroll =====
+  const header = document.querySelector('.nav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 30) {
+      header.style.background = 'rgba(11,15,20,0.92)';
+    } else {
+      header.style.background = 'rgba(11,15,20,0.75)';
+    }
+  });
+
+  // ===== Form (demo) =====
+  function handleSubmit(e) {
+    e.preventDefault();
+    alert('Thanks! This is a demo form — connect it to a service like Formspree or EmailJS to receive messages.');
+    e.target.reset();
+    return false;
+  }
+</script>
+</body>
+</html>

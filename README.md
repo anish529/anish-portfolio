@@ -1,593 +1,238 @@
-<p align="center" width="100%">
-    <img height="100" src="https://github.com/said7388/developer-portfolio/assets/77630868/c0064908-cd5f-4751-a77c-eba90a62b55c">
-</p>
+# Anish Kumar Prajapati — Java Backend Developer Portfolio
 
-<h1 align="center">Developer Portfolio</h1>
-
-<p align="center">
-  <strong>A modern, responsive, and customizable portfolio template for developers and freelancers</strong>
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Next.js-16.0.1-black?style=for-the-badge&logo=next.js" alt="Next.js 16.0.1">
-  <img src="https://img.shields.io/badge/React-19.2.0-blue?style=for-the-badge&logo=react" alt="React 19.2.0">
-  <img src="https://img.shields.io/badge/Tailwind_CSS-4.x-38B2AC?style=for-the-badge&logo=tailwind-css" alt="Tailwind CSS 4">
-  <img src="https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge" alt="License">
-</p>
-
-<p align="center">
-  <a href="#demo-movie_camera">Demo</a> •
-  <a href="#features-sparkles">Features</a> •
-  <a href="#installation-arrow_down">Installation</a> •
-  <a href="#usage-joystick">Usage</a> •
-  <a href="#deployment-rocket">Deployment</a> •
-  <a href="#tutorials-wrench">Tutorials</a>
-</p>
+A professional, recruiter-ready developer portfolio built with **Next.js 16**, **React 19**, **Tailwind CSS**, and **SCSS**. It showcases my skills as an aspiring Java Backend Developer, featuring my projects, education, certifications, and contact information.
 
 ---
 
-## Overview
+## 🔗 Live Portfolio
 
-A professional portfolio template built with **Next.js 16**, **React 19**, and **Tailwind CSS 4**. Features a modern App Router architecture, server components, and data-driven configuration for easy customization.
-
----
-
-## Demo :movie_camera:
-
-<p align="center">
-  <img src="./public/image/screen.png" alt="Portfolio Screenshot" width="100%">
-</p>
-
-<p align="center">
-  <a href="https://abusaid.netlify.app/" target="_blank">
-    <strong>🚀 View Live Demo</strong>
-  </a>
-</p>
+> Deploy to Vercel, Netlify, or any Node.js host. See [Deployment](#deployment).
 
 ---
 
-## Features :sparkles:
+## 🛠️ Technology Stack
 
-- ✅ **Cutting-Edge Tech Stack**: Built with Next.js 16, React 19, and Tailwind CSS 4
-- ✅ **Fully Responsive**: Optimized for all devices and screen sizes
-- ✅ **SEO Optimized**: Better visibility on search engines with Next.js metadata API
-- ✅ **Blazing Fast Performance**: Leverages Next.js 16 server components and streaming
-- ✅ **App Router**: Uses the modern Next.js App Router architecture
-- ✅ **Easy Customization**: Simple data-driven configuration
-- ✅ **Contact Form**: Integrated email and Telegram notifications
-- ✅ **Blog Integration**: Automatically fetch posts from dev.to
-- ✅ **Dark Theme**: Beautiful gradient design with Lottie animations
-- ✅ **Docker Support**: Easy containerized deployment
-- ✅ **Google Analytics**: Track visitor insights with GTM support
-
----
-
-## Next.js 16 Features Used :rocket:
-
-This portfolio leverages the latest Next.js 16 and React 19 capabilities:
-
-| Feature                  | Benefit                                                      |
-| ------------------------ | ------------------------------------------------------------ |
-| **App Router**           | Modern routing with layouts and nested routes                |
-| **Server Components**    | Improved performance with zero JavaScript for static content |
-| **Server Actions**       | Simplified form handling in contact page                     |
-| **Metadata API**         | Enhanced SEO with type-safe metadata                         |
-| **Image Optimization**   | Automatic image optimization with `next/image`               |
-| **Font Optimization**    | Automatic font loading with `next/font`                      |
-| **Streaming & Suspense** | Better loading states and progressive rendering              |
-| **React 19 Features**    | Actions, use hook, and improved hydration                    |
+| Layer | Technology |
+|---|---|
+| Framework | Next.js 16 (App Router, Turbopack) |
+| UI Library | React 19 |
+| Styling | Tailwind CSS + SCSS |
+| Animations | Lottie (lottie-react), CSS transitions |
+| Skills Marquee | react-fast-marquee |
+| Icons | react-icons |
+| Contact Email | Nodemailer (Gmail SMTP) |
+| Contact Notify | Telegram Bot API |
+| Form Feedback | react-toastify |
+| Analytics | Google Tag Manager (optional) |
+| Runtime | Node.js 18+ |
 
 ---
 
-## Sections :bookmark:
+## ✅ Prerequisites
 
-| Section           | Description                                         |
-| ----------------- | --------------------------------------------------- |
-| 🦸 **Hero**       | Eye-catching introduction with animated elements    |
-| 👤 **About Me**   | Personal information and professional summary       |
-| 💼 **Experience** | Work history and professional accomplishments       |
-| 🛠️ **Skills**     | Technical skills with animated marquee display      |
-| 🚀 **Projects**   | Showcase your best work with descriptions and links |
-| 🎓 **Education**  | Academic background and certifications              |
-| 📝 **Blog**       | Latest articles from dev.to (auto-fetched)          |
-| 📧 **Contact**    | Get in touch form with email/Telegram integration   |
+- **Node.js** 18 or newer — [nodejs.org](https://nodejs.org)
+- **npm** (comes with Node.js)
+- A Gmail account with an [App Password](https://myaccount.google.com/apppasswords) for the contact form
 
 ---
 
-## Table of Contents :scroll:
-
-- [Overview](#overview)
-- [Demo](#demo-movie_camera)
-- [Features](#features-sparkles)
-- [Sections](#sections-bookmark)
-- [Tech Stack](#tech-stack-computer)
-- [Installation](#installation-arrow_down)
-- [Getting Started](#getting-started-dart)
-- [Usage](#usage-joystick)
-- [Deployment](#deployment-rocket)
-- [Tutorials](#tutorials-wrench)
-  - [Gmail App Password Setup](#gmail-app-password-setup)
-  - [Create a Telegram Bot](#create-a-telegram-bot)
-  - [Fetching Blog from dev.to](#fetching-blog-from-devto)
-- [Packages Used](#packages-used-package)
-- [Contributing](#contributing-handshake)
-- [License](#license-page_with_curl)
-- [Support](#support-coffee)
-
----
-
-## Tech Stack :computer:
-
-| Technology       | Version | Purpose                                   |
-| ---------------- | ------- | ----------------------------------------- |
-| **Next.js**      | 16.0.1  | React framework with App Router           |
-| **React**        | 19.2.0  | UI component library with latest features |
-| **Tailwind CSS** | 4.x     | Utility-first CSS framework               |
-| **SASS**         | Latest  | CSS preprocessor                          |
-| **Lottie**       | Latest  | Lightweight animations                    |
-| **Nodemailer**   | Latest  | Email sending functionality               |
-| **Axios**        | Latest  | HTTP client for API requests              |
-| **Docker**       | -       | Containerization platform                 |
-
----
-
-## Installation :arrow_down:
-
-### Prerequisites
-
-Before you begin, ensure you have the following installed on your machine:
-
-| Tool                   | Minimum Version | Download Link                               |
-| ---------------------- | --------------- | ------------------------------------------- |
-| **Node.js**            | v18.17.0+       | [Download](https://nodejs.org/en/download/) |
-| **Git**                | Latest          | [Download](https://git-scm.com/downloads)   |
-| **pnpm** (recommended) | Latest          | [Install](https://pnpm.io/installation)     |
-
-> **Note**: Next.js 16 requires Node.js 18.17 or later. Node.js 20+ is recommended for optimal performance.
-
-#### Verify Installation
-
-Check your installations with these commands:
+## 🚀 Installation & Running Locally
 
 ```bash
-node --version
-git --version
-pnpm --version  # or npm --version
-```
-
----
-
-## Getting Started :dart:
-
-### 1. Fork and Clone the Repository
-
-```bash
-git clone https://github.com/<YOUR_GITHUB_USERNAME>/developer-portfolio.git
+# 1. Clone the repository
+git clone <your-repo-url>
 cd developer-portfolio
-```
 
-### 2. Install Dependencies
-
-```bash
-# Using pnpm (recommended)
-pnpm install
-
-# Using npm
+# 2. Install dependencies
 npm install
 
-# Using yarn
-yarn install
-```
+# 3. Set up environment variables (see section below)
+cp .env.example .env.local
+# Edit .env.local with your real values
 
-### 3. Set Up Environment Variables
-
-```bash
-cp .env.example .env
-```
-
-Edit the `.env` file with your values (see [Usage](#usage-joystick) section).
-
-### 4. Run the Development Server
-
-```bash
-pnpm dev
-# or
+# 4. Start the development server
 npm run dev
-# or
-yarn dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) in your browser.
-
----
-
-### 🐳 Docker Deployment (Alternative)
-
-#### Option 1: Using Docker Compose (Recommended)
-
-```bash
-docker-compose up --build
-
-# Run in detached mode
-docker-compose up -d --build
-
-# Stop
-docker-compose down
-```
-
-#### Option 2: Using Docker Directly
-
-**For Development:**
-
-```bash
-# Build the development image
-docker build -t developer-portfolio:dev -f Dockerfile.dev .
-
-# Run the container
-docker run -p 3000:3000 --name portfolio-dev developer-portfolio:dev
-
-# Stop and remove container
-docker stop portfolio-dev && docker rm portfolio-dev
-```
-
-**For Production:**
-
-```bash
-# Build the production image
-docker build -t developer-portfolio:prod -f Dockerfile.prod .
-
-# Run the production container
-docker run -p 3000:3000 --name portfolio-prod developer-portfolio:prod
+# → http://localhost:3000
 ```
 
 ---
 
-## Usage :joystick:
+## ⚙️ Environment Variables
 
-### Environment Variables Configuration
-
-Create a `.env` file in the root directory with the following variables:
+Copy `.env.example` to `.env.local` and fill in these values:
 
 ```env
-# Google Tag Manager (Optional - for analytics)
-NEXT_PUBLIC_GTM=GTM-XXXXXXX
+# Required for the contact form to send emails
+EMAIL_ADDRESS=your-gmail@gmail.com
+GMAIL_PASSKEY=your-app-password
 
-# Your deployed app URL
-NEXT_PUBLIC_APP_URL=https://your-domain.com
+# Required for the contact form API
+NEXT_PUBLIC_APP_URL=http://localhost:3000
 
-# Telegram Bot Configuration (for contact form notifications)
-TELEGRAM_BOT_TOKEN=your_bot_token_here
-TELEGRAM_CHAT_ID=your_chat_id_here
+# Optional — Telegram notifications when someone contacts you
+TELEGRAM_BOT_TOKEN=
+TELEGRAM_CHAT_ID=
 
-# Gmail Configuration (for contact form emails)
-GMAIL_PASSKEY=your_gmail_app_password
-EMAIL_ADDRESS=your_email@gmail.com
+# Optional — Google Tag Manager analytics
+NEXT_PUBLIC_GTM=
+
+# Optional — your deployed site URL (for Open Graph metadata)
+NEXT_PUBLIC_SITE_URL=https://yourdomain.com
+
+# Optional — set once verified; shows GitHub/LinkedIn icons
+NEXT_PUBLIC_GITHUB_URL=https://github.com/your-username
+NEXT_PUBLIC_LINKEDIN_URL=https://linkedin.com/in/your-profile
 ```
 
-#### Variable Descriptions:
-
-| Variable              | Required | Description                                  |
-| --------------------- | -------- | -------------------------------------------- |
-| `NEXT_PUBLIC_GTM`     | No       | Google Tag Manager ID for analytics tracking |
-| `NEXT_PUBLIC_APP_URL` | Yes      | Your portfolio's public URL                  |
-| `TELEGRAM_BOT_TOKEN`  | No       | Token for Telegram bot notifications         |
-| `TELEGRAM_CHAT_ID`    | No       | Your Telegram chat ID for receiving messages |
-| `GMAIL_PASSKEY`       | No       | Gmail app password for email notifications   |
-| `EMAIL_ADDRESS`       | No       | Your Gmail address for sending emails        |
-
-> **Note**: Contact form features require either Telegram or Gmail configuration (or both).
+> ⚠️ **Never commit `.env.local` to Git.** It is listed in `.gitignore`.
 
 ---
 
-### Customize Your Portfolio Data
+## 📝 How to Update Profile Information
 
-All portfolio content is managed through data files in the `utils/data/` folder:
+All personal data is centralised in:
 
-#### 📝 Personal Information (`personal-data.js`)
-
-```javascript
-export const personalData = {
-  name: "YOUR NAME",
-  profile: "/profile.png", // Path to your profile image
-  designation: "Software Developer", // Your job title
-  description: "Your bio and introduction...", // About yourself
-  email: "your.email@example.com",
-  phone: "+1234567890",
-  address: "City, Country",
-  github: "https://github.com/yourusername",
-  facebook: "https://www.facebook.com/yourprofile",
-  linkedIn: "https://www.linkedin.com/in/yourprofile",
-  twitter: "https://twitter.com/yourusername",
-  stackOverflow: "https://stackoverflow.com/users/your-id",
-  leetcode: "https://leetcode.com/yourusername/",
-  devUsername: "yourusername", // dev.to username for blog integration
-  resume: "https://link-to-your-resume.pdf",
-};
+```
+utils/data/personal-data.js    ← name, email, phone, designation, bio
+utils/data/educations.js       ← education entries
+utils/data/experience.js       ← certifications & achievements
+utils/data/projects-data.js    ← project cards
+utils/data/skills.js           ← skills shown in the icon marquee
+utils/data/contactsData.js     ← contact section data
 ```
 
-#### 💼 Additional Data Files
+Edit these files directly. The components read from them automatically.
 
-| File               | Purpose                                        |
-| ------------------ | ---------------------------------------------- |
-| `experience.js`    | Your work experience and job history           |
-| `projects-data.js` | Portfolio projects with descriptions and links |
-| `skills.js`        | Technical skills and competencies              |
-| `educations.js`    | Academic background and certifications         |
-| `contactsData.js`  | Contact form configuration                     |
+---
 
-#### 🎨 Adding Your Profile Image
+## 🎯 How to Update Projects
 
-Place your profile picture in the `public/` directory and update the `profile` field in `personal-data.js`:
+Open [`utils/data/projects-data.js`](utils/data/projects-data.js) and edit the array. Each project has:
 
-```javascript
-profile: "/your-image-name.png"; // or .jpg, .webp
+```js
+{
+    id: 1,
+    name: 'Project Name',
+    description: "Short description...",
+    tools: ['Java', 'Spring Boot'],
+    role: 'Backend Developer',
+    code: '',           // GitHub URL — leave blank if not public
+    demo: '',           // Live demo URL — leave blank if none
+    status: 'In Progress',   // or 'Completed'
+    period: 'October 2026',
+    highlights: ['Feature 1', 'Feature 2'],
+}
 ```
 
 ---
 
-## Deployment :rocket:
+## 📄 How to Add / Update Your Resume
 
-### 🚀 Deploy to Vercel (Recommended)
+Place your updated PDF at:
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/said7388/developer-portfolio)
-
-**Manual Deployment:**
-
-1. Sign up at [Vercel](https://vercel.com/)
-2. Import your GitHub repository
-3. Add environment variables in **Settings** → **Environment Variables**
-4. Deploy
-
-**Features:**
-
-- Native Next.js 16 support
-- Automatic deployments on push
-- Preview deployments for PRs
-- Edge runtime support
-- Global CDN and free SSL
-
----
-
-### 🌐 Deploy to Netlify
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/said7388/developer-portfolio)
-
-**Manual Deployment:**
-
-1. Sign up at [Netlify](https://www.netlify.com/)
-2. Import your GitHub repository
-3. Build command: `npm run build`
-4. Publish directory: `.next`
-5. Add environment variables in **Site Settings** → **Environment**
-
----
-
-### 🐳 Deploy with Docker
-
-```bash
-# Build production image
-docker build -t developer-portfolio:prod -f Dockerfile.prod .
-
-# Run
-docker run -d -p 80:3000 --name portfolio developer-portfolio:prod
-
-# Or use Docker Compose
-docker-compose -f docker-compose.prod.yml up -d
+```
+public/resume.pdf
 ```
 
+The **Download Resume** button in the hero section and the footer link both point to `/resume.pdf`. The current file `public/resume.pdf` is your `ANISH JAVA RESUME.pdf` copied from the Desktop.
+
 ---
 
-## Tutorials :wrench:
+## 🔧 How to Configure the Contact Form
 
-### 📧 Gmail App Password Setup
+The contact form sends messages via Gmail SMTP and optionally via Telegram:
 
-1. Go to [https://myaccount.google.com/](https://myaccount.google.com/)
-2. Navigate to **Security** → **2-Step Verification** (enable if not already)
-3. Go to **Security** → **App Passwords**
-4. Select app: **Mail**, device: **Other (Custom name)**
-5. Generate and copy the 16-character password
-6. Add to `.env` file:
+1. Go to [Google App Passwords](https://myaccount.google.com/apppasswords)
+2. Create an App Password for "Mail" on your Gmail account
+3. Add it to `.env.local`:
+   ```
+   EMAIL_ADDRESS=prajapatianish437@gmail.com
+   GMAIL_PASSKEY=xxxx-xxxx-xxxx-xxxx
+   ```
+4. Optionally create a Telegram bot via [@BotFather](https://t.me/BotFather) and add the token + your chat ID
+
+The API route is at `app/api/contact/route.js`. It requires **both** Telegram token and chat ID, or it returns a 400 error — update the condition if you only want email.
+
+---
+
+## 🔗 How to Enable GitHub & LinkedIn Icons
+
+Set these in `.env.local`:
 
 ```env
-GMAIL_PASSKEY=abcd efgh ijkl mnop
-EMAIL_ADDRESS=your.email@gmail.com
+NEXT_PUBLIC_GITHUB_URL=https://github.com/your-username
+NEXT_PUBLIC_LINKEDIN_URL=https://linkedin.com/in/your-profile
 ```
 
----
-
-### 🤖 Create a Telegram Bot
-
-1. Open Telegram and search for `@BotFather`
-2. Send `/newbot` command
-3. Set bot name and username (must end with `bot`)
-4. Copy the bot token
-5. Send a message to your bot
-6. Get chat ID from: `https://api.telegram.org/bot<BOT_TOKEN>/getUpdates`
-7. Add to `.env` file:
-
-```env
-TELEGRAM_BOT_TOKEN=123456789:ABCdefGHIjklMNOpqrsTUVwxyz
-TELEGRAM_CHAT_ID=123456789
-```
+The icons appear in the Hero and Contact sections automatically.
 
 ---
 
-### 📝 Fetching Blog from dev.to
-
-1. Create a [dev.to](https://dev.to/) account
-2. Open `utils/data/personal-data.js`
-3. Set your dev.to username:
-
-```javascript
-export const personalData = {
-  // ... other fields
-  devUsername: "yourusername",
-};
-```
-
-The portfolio automatically fetches and displays your latest public articles. No API key required.
-
----
-
-## Packages Used :package:
-
-### Core Dependencies
-
-| Package         | Version | Purpose                                                      |
-| --------------- | ------- | ------------------------------------------------------------ |
-| **next**        | ^16.0.1 | Latest React framework with App Router and Server Components |
-| **react**       | ^19.2.0 | JavaScript library with improved concurrent rendering        |
-| **react-dom**   | ^19.2.0 | React package for working with the DOM                       |
-| **tailwindcss** | ^4.1.16 | Modern utility-first CSS framework                           |
-| **sass**        | Latest  | CSS preprocessor for styling                                 |
-
-### UI & Animations
-
-| Package                | Purpose                                    |
-| ---------------------- | ------------------------------------------ |
-| **lottie-react**       | Lightweight animations with Lottie files   |
-| **react-fast-marquee** | Smooth scrolling marquee component         |
-| **react-icons**        | Popular icon library with easy integration |
-| **react-toastify**     | Beautiful notification toasts              |
-
-### Functionality
-
-| Package                    | Purpose                           |
-| -------------------------- | --------------------------------- |
-| **axios**                  | Promise-based HTTP client         |
-| **nodemailer**             | Email sending functionality       |
-| **@emailjs/browser**       | Client-side email service         |
-| **react-google-recaptcha** | Google reCAPTCHA integration      |
-| **sharp**                  | High-performance image processing |
-| **@next/third-parties**    | Third-party script optimization   |
-
----
-
-## Troubleshooting :wrench:
-
-### Common Issues and Solutions
-
-<details>
-<summary><strong>❌ "next is not recognized as an internal or external command"</strong></summary>
-
-**Solution:**
+## 🏗️ Build & Validate
 
 ```bash
-# Option 1: Install Next.js globally
-npm install -g next
+# Lint
+npm run lint
 
-# Option 2: Use npx (recommended)
-npx next dev
+# Production build
+npm run build
 
-# Option 3: Use package manager scripts
-npm run dev
+# Start production server
+npm run start
 ```
 
-</details>
+---
 
-<details>
-<summary><strong>❌ Port 3000 is already in use</strong></summary>
+## 🌐 Deployment
 
-**Solution:**
+### Vercel (Recommended)
+1. Push your code to GitHub
+2. Import the repo at [vercel.com](https://vercel.com)
+3. Add all environment variables from `.env.example` in the Vercel dashboard
+4. Deploy — Vercel detects Next.js automatically
 
-```bash
-# Find and kill the process using port 3000
-# On macOS/Linux:
-lsof -ti:3000 | xargs kill -9
+### Netlify
+1. Set build command: `npm run build`
+2. Set publish directory: `.next`
+3. Install the [Netlify Next.js plugin](https://docs.netlify.com/integrations/frameworks/next-js/)
+4. Add environment variables in the Netlify dashboard
 
-# On Windows:
-netstat -ano | findstr :3000
-taskkill /PID <PID> /F
+---
 
-# Or use a different port:
-PORT=3001 npm run dev
+## 📁 Project Structure
+
+```
+developer-portfolio/
+├── app/
+│   ├── api/contact/route.js      # Contact form API (email + Telegram)
+│   ├── components/
+│   │   ├── homepage/
+│   │   │   ├── about/            # About section
+│   │   │   ├── contact/          # Contact form + info
+│   │   │   ├── education/        # Education cards
+│   │   │   ├── experience/       # Achievements & certifications
+│   │   │   ├── hero-section/     # Hero with Java code snippet
+│   │   │   ├── projects/         # Project cards
+│   │   │   └── skills/           # Skill groups + marquee
+│   │   ├── footer.jsx
+│   │   └── navbar.jsx            # Responsive nav with mobile menu
+│   ├── css/
+│   ├── layout.js                 # SEO metadata, fonts, viewport
+│   └── page.js                   # Home page (server component)
+├── utils/
+│   └── data/                     # All personal data files
+├── public/
+│   └── resume.pdf                # Your resume (ANISH JAVA RESUME.pdf)
+├── .env.example                  # Safe template for environment vars
+└── README.md
 ```
 
-</details>
-
-<details>
-<summary><strong>❌ Module not found or dependency errors</strong></summary>
-
-**Solution:**
-
-```bash
-# Clear cache and reinstall dependencies
-rm -rf node_modules package-lock.json
-npm cache clean --force
-npm install
-
-# Or with pnpm:
-rm -rf node_modules pnpm-lock.yaml
-pnpm store prune
-pnpm install
-```
-
-</details>
-
-<details>
-<summary><strong>❌ Environment variables not working</strong></summary>
-
-**Solution:**
-
-- Ensure `.env` file is in the root directory
-- Restart the development server after changing `.env`
-- Check that variables starting with `NEXT_PUBLIC_` are used for client-side code
-- Server-side variables should NOT start with `NEXT_PUBLIC_`
-
-</details>
-
-<details>
-<summary><strong>❌ Images not loading</strong></summary>
-
-**Solution:**
-
-- Verify images are in the `public/` directory
-- Use paths starting with `/` (e.g., `/profile.png`)
-- Check image file extensions match the code
-- Ensure image files are committed to your repository
-
-</details>
-
-<details>
-<summary><strong>❌ Contact form not sending emails</strong></summary>
-
-**Solution:**
-
-- Verify Gmail App Password is correct (16 characters)
-- Check that 2-Step Verification is enabled on your Google account
-- Ensure `EMAIL_ADDRESS` matches the Gmail account
-- Test Telegram bot token and chat ID separately
-- Check browser console for error messages
-
-</details>
-
 ---
 
-## Contributing :handshake:
+## 👤 About
 
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/AmazingFeature`
-3. Commit changes: `git commit -m 'Add some AmazingFeature'`
-4. Push to branch: `git push origin feature/AmazingFeature`
-5. Open a Pull Request
-
----
-
-## License :page_with_curl:
-
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
-
----
-
-## Support :coffee:
-
-- ⭐ [Star the repository](https://github.com/said7388/developer-portfolio/stargazers)
-- � [Report bugs](https://github.com/said7388/developer-portfolio/issues)
-- � [Suggest features](https://github.com/said7388/developer-portfolio/discussions)
-
----
-
-![GitHub stars](https://img.shields.io/github/stars/said7388/developer-portfolio?style=social)
-![GitHub forks](https://img.shields.io/github/forks/said7388/developer-portfolio?style=social)
-![GitHub issues](https://img.shields.io/github/issues/said7388/developer-portfolio)
-![GitHub license](https://img.shields.io/github/license/said7388/developer-portfolio)
+**Anish Kumar Prajapati**  
+Aspiring Java Backend Developer  
+Chittaurgarh, Rajasthan, India  
+📧 prajapatianish437@gmail.com  
+📞 +91-9171357320

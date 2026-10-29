@@ -2,22 +2,29 @@ import { projectsData } from '@/utils/data/projects-data';
 import ProjectCard from './project-card';
 
 const Projects = () => {
-
   return (
-    <div id='projects' className="relative z-50  my-12 lg:my-24">
-      <div className="sticky top-10">
-        <div className="w-[80px] h-[80px] bg-violet-100 rounded-full absolute -top-3 left-0 translate-x-1/2 filter blur-3xl  opacity-30"></div>
-        <div className="flex items-center justify-start relative">
-          <span className="bg-[#1a1443] absolute left-0  w-fit text-white px-5 py-3 text-xl rounded-md">
-            PROJECTS
-          </span>
-          <span className="w-full h-[2px] bg-[#1a1443]"></span>
+    <div id='projects' className="relative z-50 border-t my-12 lg:my-24 border-[#25213b]">
+      {/* Top Section Divider Glow Line */}
+      <div className="flex justify-center -translate-y-[1px]">
+        <div className="w-3/4">
+          <div className="h-[1px] bg-gradient-to-r from-transparent via-violet-500 to-transparent w-full" />
         </div>
       </div>
 
-      <div className="pt-24">
+      {/* Centered Section Header */}
+      <div className="flex justify-center my-6 lg:py-8">
+        <div className="flex items-center">
+          <span className="w-16 sm:w-24 h-[2px] bg-[#1a1443]"></span>
+          <span className="bg-[#1a1443] w-fit text-white p-2 px-6 text-xl sm:text-2xl rounded-md uppercase font-semibold tracking-wider flex items-center gap-2">
+            Featured <span className="text-[#16f2b3]">Projects</span>
+          </span>
+          <span className="w-16 sm:w-24 h-[2px] bg-[#1a1443]"></span>
+        </div>
+      </div>
+
+      <div className="pt-6 sm:pt-10">
         <div className="flex flex-col gap-6">
-          {projectsData.slice(0, 4).map((project, index) => (
+          {projectsData.map((project, index) => (
             <div
               id={`sticky-card-${index + 1}`}
               key={index}
