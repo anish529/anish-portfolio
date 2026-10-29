@@ -44,6 +44,14 @@ export const metadata = {
     description:
       "Aspiring Java Backend Developer — Spring Boot, REST APIs, MySQL, Multithreading. Currently building a Real-Time Collaborative Sync Engine.",
   },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", type: "image/png" },
+    ],
+    apple: "/icon.png",
+    shortcut: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({ children }) {
